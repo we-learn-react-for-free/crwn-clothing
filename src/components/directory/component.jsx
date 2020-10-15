@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
 import "./styles.scss";
 import MenuItem from "../menu-item/component";
 
@@ -44,19 +43,19 @@ class Directory extends Component {
     };
   }
 
-  componentWillMount() {}
+  // componentWillMount() {}
 
-  componentDidMount() {}
+  // componentDidMount() {}
 
-  componentWillReceiveProps(nextProps) {}
+  // componentWillReceiveProps(nextProps) {}
 
-  shouldComponentUpdate(nextProps, nextState) {}
+  // shouldComponentUpdate(nextProps, nextState) {}
 
-  componentWillUpdate(nextProps, nextState) {}
+  // componentWillUpdate(nextProps, nextState) {}
 
-  componentDidUpdate(prevProps, prevState) {}
+  // componentDidUpdate(prevProps, prevState) {}
 
-  componentWillUnmount() {}
+  // componentWillUnmount() {}
 
   render() {
     const { data } = this.state;
@@ -71,7 +70,5 @@ class Directory extends Component {
   }
 }
 
-// VALIDATION PROPS
-Directory.propTypes = {};
 
 export default Directory;

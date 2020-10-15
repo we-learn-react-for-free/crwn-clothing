@@ -1,12 +1,12 @@
 import React from "react";
-import "./styles.scss";
-import PropTypes from "prop-types";
 import { withRouter } from "react-router-dom";
+
+import './styles.scss';
 
 const MenuItem = ({ title, imageUrl, size, linkUrl, history, match }) => {
   return (
     <div
-      className={`${size} menu-item`}
+      className={`${size ? size : '' } menu-item`}
       onClick={() => history.push(`${match.url}${linkUrl}`)}
     >
       <div
@@ -21,17 +21,6 @@ const MenuItem = ({ title, imageUrl, size, linkUrl, history, match }) => {
       </div>
     </div>
   );
-};
-
-// default props
-MenuItem.defaultProps = {
-  title: "UNKNOWN",
-};
-
-// VALIDATION PROPS
-MenuItem.propTypes = {
-  title: PropTypes.string.isRequired,
-  imageUrl: PropTypes.string.isRequired,
 };
 
 export default withRouter(MenuItem);
