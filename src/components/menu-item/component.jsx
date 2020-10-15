@@ -31,7 +31,7 @@ MenuItem.defaultProps = {
 // VALIDATION PROPS
 MenuItem.propTypes = {
   title: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired,
+  imageUrl: PropTypes.string.isRequired,
 };
 
 export default withRouter(MenuItem);
