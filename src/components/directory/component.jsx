@@ -62,8 +62,9 @@ class Directory extends Component {
     const { data } = this.state;
     return (
       <div className="directory-menu">
-        {data.map(({ id, title, imageUrl , size }, index) => (
-          <MenuItem key={id} title={title} image={imageUrl} size={ size } />
+        {data.map(({ id, ...otherProps }) => (
+            // the otherProps is ( title , imageUrl , size , linkUrl ) and we spread it 
+          <MenuItem key={id} { ...otherProps } />
         ))}
       </div>
     );

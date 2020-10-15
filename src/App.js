@@ -1,13 +1,26 @@
-import React from 'react';
-import './App.css';
-import HomePage from './pages/homepage/component';
+import React from "react";
+import { Route, Switch } from "react-router-dom";
+import "./App.css";
+import HomePage from "./pages/homepage/component";
 
-function App() {
+const NotFound = () => <h1>404 not found</h1>;
+
+const TestRoute = (props) => {
+  const { id } = props.match.params;
+  console.log(id);
+  return "hi";
+};
+
+const App = () => {
   return (
     <div>
-      <HomePage/>
+      <Switch>
+        <Route exact path="/" component={HomePage} />
+        <Route exact path="/shop/hats" component={TestRoute} />
+        <Route component={NotFound} />
+      </Switch>
     </div>
   );
-}
+};
 
 export default App;
